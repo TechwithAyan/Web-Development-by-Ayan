@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /*--Now we use internal CSS using style tag with selector and declaration , in bottom we use h2 as a selector and this page's every h2 will be coloured*/
+        h2{
+            background-color: black;
+            color: crimson;
+        }
+    </style>
+       <!--We us external CSS in a different file and link it with our html file-->
+       <link rel="stylesheet" href="External_CSS_Link.css"
+</head>
+<body>
+    <div>
+        <ol>
+            <li>Inline CSS</li>
+            <li>Internal CSS</li>
+            <li>External CSS</li>
+        </ol>
+    </div>
+    <!--Bottom is an inline CSS using style attribute-->
+    <h1 style="color:aqua;background-color: black;">I am coloured using Inline CSS</h1>
+    <!--Now we use internal CSS using style tag with selector and declaration , in bottom we use h2 as a selector and this page's every h2 will be coloured-->
+     <h2>Hey I am coloured using Internal CSS</h2>
+     
+     <h3>Hey I am coloured using external CSS which is in a file named "External_CSS_Link.css"</h3>
+      
+     <!--External stylesheet is the best way-->
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Variables</title>
+    <style>
+        /*We declare 2 global  variables named color and secolor under class root*/
+        :root{
+            --color:darkblue;
+            --seccolor:lightblue;
+            /*CSS variables not only gives color but can also be used for giving padding , here we give a variable name defpad which means default padding*/
+            --defpad:23px;
+        }
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .nav{
+            /*background-color: darkgreen*/
+            /*If we uncomment the above line it will color the nav background darkgreen but if we want to change the color of nav we can directly call the root variables and change the color to darkblue*/
+            background-color: var(--color);
+        }
+        ul li{
+            list-style:none;
+            /*Instead of giving padding everytime we can call the variable defpad and change in that*/
+            padding: var(--defpad);
+        }
+        ul li:nth-child(2){
+            /*Here we use the variable color as local variable and change the color of contact which is second child to orange */
+            --color:orange;
+            background-color: var(--color);
+        }
+        .container{
+            /*background-color: lightgreen*/
+            /*If we uncomment the above line will color the nav background lightgren but if we want to change the color of nav we can directly call the root variables and change the color to lightblue*/
+            background-color: var(--seccolor);
+        }
+        /*Everytime we want to change our color of the classes we change the colors in variables*/
+    </style>
+</head>
+<body>
+    <div class="nav"> 
+        <ul>
+            <li>Home</li>
+            <li>Contact</li>
+            <li>About</li>
+        </ul>
+    </div>
+    <div class="container">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti accusamus eaque error aperiam aspernatur laborum molestias non corporis nostrum, asperiores, quisquam quod maiores!
+    </div>
+    
+</body>
+</html>

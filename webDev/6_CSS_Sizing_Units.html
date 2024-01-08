@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Sizing Units</title>
+    <style>
+        html{
+            /*html is the root element*/
+            font-size:12px;
+        }
+        .box{
+            border:2px solid black;
+            /*width: 230 px;*/
+            /* A pixel is 196 of an inch */
+            width:80vw;
+            margin:23px auto;
+            background-color:aqua;
+        }
+        .box1{
+            border:2px solid black;
+            width: 80vw;
+             /*Here vw means viewport width , it adjusts according to our device's view port*/
+             height: 80vh;
+             /*Here vh means viewport height , it adjusts according to our device's view port*/
+            background-color:pink;
+            /*We use margin auto for automatically adding margin from left and right but this margin applies only to box elements like div but cant be added to inline elements like span*/
+            margin:23px auto;
+            font-size: 16px;
+            text-overflow:ellipsis;
+            overflow:hidden;
+            /*23 px is the height and auto is margin from left and right*/
+        }
+
+        .box1 p{
+            font-size:2em;
+            /*2em means 2 times the size of font of box1*/ 
+         }
+         .box2{
+            border:2px solid black;
+            width: 80vw;
+             height: 80vh;
+            background-color:rgb(71, 210, 46);
+            margin:23px auto;
+            font-size: 16px;
+        }
+         .box2 p{
+            font-size:2rem;
+            /*2rem means 2 times the size of font of root element ie html*/ 
+         }
+    </style>
+</head>
+<body>
+    <div class="box">
+        This is a box
+    </div>
+    <div class="box1">
+      <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Velit nobis esse ducimus eligendi quasi laborum animi. Ab aliquid debitis voluptate mollitia, officiis dolorum doloribus soluta nam molestias et, facere veritatis!</p>
+    </div>
+    <div class="box2">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Temporibus incidunt, omnis quia, aspernatur, sed architecto modi debitis reiciendis nihil veritatis cumque ab dignissimos?</p>
+    <div/>
+    <!--In computer  vmin is height ie vh and in phone vmin is width vw -->
+</body>
+</html>

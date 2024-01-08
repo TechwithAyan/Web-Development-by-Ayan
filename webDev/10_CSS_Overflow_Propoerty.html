@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Shadows and Outlines</title>
+    <style>
+        .box{
+            border:2px solid black;
+            width:43vw;
+            height:23vh;
+            /*As we see that the text overflows the box therefore we use overflow property . If we use overflow:scroll than it will give a scroll bar else we can use overflow:auto */
+            overflow:scroll;
+            /*When we use overflow:auto then if text overflows the box it gives a scroll bar otherwise it doesn't   */
+            overflow:auto;
+            overflow-x:hidden;
+            overflow-y:scroll;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut, debitis velit unde quidem minima sequi beatae laudantium pariatur possimus blanditiis, facere animi. Suscipit.
+    </div>
+    
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Float And Clear</title>
+    <!--Float and clear are not much used after knowing flexbox-->
+    <style>
+        .cards{
+            border:3px solid black;
+            /*As we see that the image overflows the container and comes below so we use a property called display:flow-root;*/
+            display:flow-root
+        }
+        .card{
+            border:2px solid red;
+        }
+        .card:nth-child(3){
+            /*lorem 350 is the 3rd child as 1st child is the image itself*/
+            background-color: aqua;
+              /*If we dont want our 2nd div lorem350 to allow any element or image on its both we use a property called clear*/
+            clear:both;
+        }
+        img{
+            /*As float is left therefore it allows to  write the content in right*/
+            float:left;
+        }
+    </style>
+</head>
+<body>
+    <div class="cards">
+        <img src="Image.png" alt="" width="130px" height="130px">
+        <div class="card">Card 1</div>
+        <div class="card">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Beatae in veritatis commodi amet, porro necessitatibus modi ad sequi quibusdam hic blanditiis molestiae, fugit reprehenderit et dolor exercitationem dolores quod. Quia deserunt voluptatibus harum nesciunt debitis similique, libero accusantium vero explicabo recusandae fuga voluptates minus, commodi illum beatae velit doloremque. Nihil aliquam incidunt maxime non inventore illum assumenda illo dolores possimus. Iure, eos? Eaque at beatae fuga? Cupiditate omnis reprehenderit perferendis aliquid natus eius tempore, ipsum porro sapiente suscipit numquam laboriosam quia, saepe nesciunt dignissimos pariatur, modi excepturi atque nihil placeat necessitatibus! Tempora, esse rem dolores nihil in, excepturi illum cumque, voluptate dicta hic tempore ad temporibus quidem veniam labore. Sint veniam dolorum numquam asperiores ipsam animi, hic quae cum et aspernatur voluptas mollitia minus quis omnis molestias ipsum, facere aliquam quos fugiat eveniet beatae quam placeat quibusdam? Provident tenetur, inventore quos odio et rem, doloribus dignissimos perferendis officia iste minima magnam eaque libero quam ad est dolorem animi voluptas molestias, tempora distinctio dicta velit! Dicta sapiente dolorem laboriosam excepturi commodi fugit neque quam non voluptatum? Odit et cumque nisi aut blanditiis accusamus, voluptatem architecto id illum at aspernatur magnam, dolor neque fugit perspiciatis laborum perferendis voluptates. Itaque omnis veritatis numquam nostrum, suscipit perferendis aliquam voluptatibus, corrupti mollitia, praesentium vero aliquid reiciendis alias? Doloremque natus aspernatur impedit. Aliquam aperiam facere illo officia amet, repellat architecto? Nobis distinctio fugit repellat? Repudiandae laborum ipsa quasi temporibus illum, unde, earum magnam asperiores magni nesciunt tempore at exercitationem facilis nam debitis suscipit placeat adipisci consequatur similique ut ratione fuga a esse. Sequi, tempore! Enim corrupti fugit expedita quisquam et. Nobis earum esse suscipit vitae magnam obcaecati autem ratione corrupti similique minus, fugit adipisci quas labore tempora in harum aperiam reiciendis ea commodi alias explicabo officia eos nemo dignissimos. Blanditiis commodi assumenda, deleniti molestiae eum reprehenderit et dignissimos cumque. Hic, adipisci vel! Dolor rerum quisquam nesciunt ratione saepe enim fugit illo eum tempore sit, amet officiis, aut laboriosam corporis, voluptate deserunt temporibus veritatis perspiciatis aspernatur quidem modi ab nobis! Laborum soluta temporibus quas fugit dolorem sequi, velit dolore illum tenetur animi recusandae nulla eveniet nobis et!</div>
+        <div class="card">Card 3</div>
+    </div>
+    
+</body>
+</html>

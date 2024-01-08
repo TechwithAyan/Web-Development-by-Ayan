@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Flexbox</title>
+    <style>
+        .container{
+            border:2px solid black;
+            /*Boxes are from top to bottom but if we want our boxes from left to right , we use flex box and we give display display:flex inside the container class so that we can use its properties*/
+            display: flex; 
+            height: 70vh;
+            /*If we want our items to be horizontally centered*/
+            justify-content: center;
+            /*But we dont have justify-items in flexbox*/
+            /*If we want our items to be vertically centered moreover we use align-items when we have 1 liner items*/
+            align-items:center;
+            /*We use align-contents when we have more than 1 liner items ie 2 or more lines*/
+            align-content: center;
+            /*If we want our items from top to bottom*/
+            flex-direction: column;
+            /*If we want our items from bottom to top*/
+            flex-direction: column-reverse;
+            /*If we want our items from left to right*/
+            flex-direction: row;
+            /*If we want our items from right to left*/
+            flex-direction: row-reverse;
+            /*We use flex-wrap to wrap new content to bottom line*/
+            /*flex-wrap: wrap;*/
+            /*As we used flex-wrap we can see that 6 boxes were brought to  bottom line once they overflowed*/
+            /*flex-flow:direction wrap*/
+            /*flex-flow: row wrap;*/
+            /*As we have flex properties for container , simillarly we have flex properties for items*/
+            row-gap: 100px;
+            column-gap: 30px;
+            /*Short hand for row-gap and column-gap is gap: row gap ! column gap*/
+            gap:40px 10px;
+        }
+        .item{
+            /*let every item has flex grow 1*/
+            flex-grow:1;
+            height: 52px;
+            width: 52px;
+            background-color: rgb(169, 82, 209);
+            border: 3px solid black;
+            /*margin:4px;*/
+            color:black;
+        }
+        /*According to order  it appears , the less the order it appears at early the more  the order it appears later*/
+        .order-1{
+            order:1;
+        }
+        .order-2{
+            order:2;
+        }
+        .order-3{
+            order:3;
+        }
+        .item1{
+            flex-grow: 2;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <div class="container">
+            <div class="item">1</div>
+            <div class="item">2</div>
+            <div class="item">3</div>
+            <div class="item">4</div>
+            <div class="item"></div>
+            <!--As default order is 0 so it goes to 2nd last and last element-->
+            <div class="item order-1">68</div>
+            <div class="item order-2">69</div>
+        
+        </div>
+
+    </main>
+    
+</body>
+</html>

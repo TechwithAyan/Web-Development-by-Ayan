@@ -1,0 +1,87 @@
+<!--This is a HTML file as we use internal CSS-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Selectors</title>
+    <style>
+        /*Element Selector*/
+        div{
+            color: black;
+            background-color: white;
+        }
+        /*Class Selector here pink using dot*/
+        .pink{
+            background-color: pink; 
+        }
+        /*Id selector here green using # */
+        #yellow{
+            background-color: yellow;
+        }
+        /*Attribute Selector*/
+        [data-x=a]{
+            background-color: rgb(150, 214, 20);
+        }
+        /*Child selectors ,its applied to a paragraph inside div but it should be the first child*/
+        div > p{
+            color: rgb(60, 209, 10);
+            background-color: white;
+        }
+        /*Descendant Selector , it can be applied to any descendant child inside div or span (here we take span for referrence) , it need not be the first child*/
+        span p{
+            color:rgb(238, 18, 6);
+            background-color: white;
+        }
+        /*Universal Selector used for giving margin and padding to every element*/
+        *{
+            margin:0;
+            padding:0;
+        }
+        /*pseudo selector , we can use this selector to colour any element visited and not visited differently*/
+        a:link{
+            color:deeppink
+        }
+        a:visited{
+            color: blue;
+        }
+        /*We use a:active to colour the background of the link when clicked */
+        a:active{
+            background-color: chartreuse;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        I am a div
+    </div>
+    <!--problem with this is if we add another div whoose background color we want to be pink but it will be red only , for this problem we use class selector as  (.class)-->
+    <div class="pink">
+        I am coloured using class selector
+    </div>
+    <!--Id selector-->
+    <div id="yellow">
+        I am coloured using id selector
+    </div>
+    <span>
+        <h1 data-x="a">I am coloured using attribute selector</h1>
+    </span>
+    <!--If we use paragraph <p> inside any div it will get <coloured but remember it wont be coloured if paragraph is not a direct child of div , shown in line no 45-->
+    <div>
+        <p>I am a para inside div ie I am a direct child of div and I am coloured green using child selector</p>
+    </div>
+    <div>
+        <article>
+            <p>I am inside div but not a direct child as article tag came before me so I wont be coloured green</p>
+        </article>
+    <span>
+        <article>
+            <p>I am inside span but not a direct child as article tag came before me still I will be coloured red as we used descendant Selector</p>
+        </article>
+    </span>
+    <a href="https://www.google.com">Go to Google</a>
+    <br>
+    <a href="https://www.bumble.com">Go to Bumble</a>
+
+</body>
+</html>

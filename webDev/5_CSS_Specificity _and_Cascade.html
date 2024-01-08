@@ -1,0 +1,52 @@
+<!--Cascade Algorithms
+1. Position and order of appearence: If selector is of same type ex class selector id selector etc then selector which is at last is prioritized
+2. Specificity: an algorithm that determines which CSS selector has strongest match , specificity order : inline CSS > ID selector > Class selector > Element selector > Universal selector
+3. Origin: Order in which CSS appears ->
+4. Importance:some CSS rules are weighted more heavily than <others-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Specificity</title>
+    <style>
+        /*The specificity of class selector is 10*/
+       pink{
+            color: pink;
+        }
+         /*The specificity of this selector is (1 + 10 = 11) as h4 is element it has a specificity  1*/
+         h4.olive{
+            color: olive;
+        }
+        /*The specificity of class selector is 10*/
+        .red{
+            color: red;
+        }
+        /*The specoficity of element selector is 1*/
+        h2{
+            color: blue;
+        }
+        h3{
+            color: hotpink !important;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <h1 class="olive pink red">About first algorithm</h1>
+        <!--We see that h1 is colored red as by algorithm 1 all 3 have class selectors hence last one ie .red is prioritized-->
+    </div>
+    <div>
+        <h2 style="color: black;" class="olive pink red">About second algorithm</h2>
+        <!--Now we see that h2 has 3 selectors first is element selector(blue) , secodn is inline CSS(black) , remaining are class selectors , therefore inline CSS is given priority , specificity of inline CSS is 100-->
+    </div>
+    <div>
+        <h3 style="color: pink;" class="olive pink red">About !important</h2>
+        <!--Now we see that h3 has selectors first is element selector(hotpink) , inline CSS(pink) , 3 class selectors and one !important keyword which is given the highest priority--></h3>
+    </div>
+    <div>
+        <h4 class="olive pink red">About element.specificity</h4>
+        <!--It will be coloured olive as it has a specifity of 11 as element h4 comes before and it adds up-->
+    </div>
+</body>
+</html>

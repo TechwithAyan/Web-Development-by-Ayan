@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>More on CSS Selectors</title>
+    <style>
+        .box1{
+            background-color: cadetblue;
+        }
+        .box2{
+            margin:6px;
+        }
+        .box2:first-line{
+            color:red;
+            margin:6px;
+        }
+        /*For selecting all the elements inside the box we use universal selector after class*/
+        .boxes *{
+            border:2px solid black;
+            /*By this universal selector we can add border to all the boxes*/
+            padding: 0px;
+        }
+        [data-color="black"]{
+            border-radius: 12px;
+            border-color: red;
+            margin:6px;
+        }
+        .boxes::before{
+            content:"Ayan is a great guy!";
+        }
+    </style>
+</head>
+<body>
+    <div class="boxes">
+        <div class="box1">Hey I am a box</div>
+        <div class="box2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit illum hic quis possimus cum illo voluptatibus perspiciatis tempore. Est ea optio ratione fugiat laudantium totam officiis iste sapiente nobis tempore, placeat obcaecati molestiae vitae reiciendis. Commodi omnis quasi ipsam doloribus illo magni, non in sequi!</div>
+        <div data-color="black" class="box3">Hey I am another box</div>
+    </div>
+    
+</body>
+</html>

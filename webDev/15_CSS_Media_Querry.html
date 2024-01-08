@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Media Queries</title>
+    <!--Syntax for media query is @media not|only media type and (expressions)-->
+    <style>
+        body{
+            background-color: greenyellow;
+        }
+        /*The screen background color will be greenyellow but when pixel is reduced from 455px ie from (0-454)px background color changes to blue */
+        @media only screen and (max-width: 455px){
+            body{
+                background-color: blue;
+            }
+            .boxes{
+                flex-direction:column;
+            }
+        }
+        .boxes{
+            /*Flex box will be taught lately*/
+            display: flex;
+        }
+        .box{
+            width:344px;
+            height:344px;
+            background-color: slateblue;
+            padding: 3px;
+            margin: 3px;
+        }
+        /*We have 1 more media query where we can change orientation as portrait or landscape*/
+        @media screen and (orientation:landscape){
+            body{
+                border:4px solid black;
+                /*Body will get a border when orientation is landscapre*/
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="boxes">
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+    </div>
+    
+</body>
+</html>

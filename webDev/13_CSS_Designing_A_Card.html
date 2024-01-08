@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Designing a card</title>
+    <style>
+        *{
+            margin:0;
+            padding:0;
+        }
+        .content{
+            text-align: center;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            padding: 9px;
+        }
+        .content p{
+            font-size:11px;
+            font-family: cursive;
+            padding:12px;
+            color:grey;
+        }
+        body{
+            background-color: gray;
+            /*To move the card to a bit right we give padding*/
+            padding: 95px;
+        }
+        .card{
+            background-color: white;
+            width:208px;
+            height:544px;
+            /*For curvy border we give border radius*/
+            border-radius:7px;
+        }
+        .image{
+            padding:10px;
+        }
+        .image img{
+            border-radius:7px;
+        }
+        .capsules{
+            padding: 24px;
+        }
+        .capsules span{
+            font-size: small;
+            text-decoration: solid ;
+            /*To make the capsules bold*/
+            font-weight: 600;
+            border:1px solid black;
+            border-radius: 7px;
+            font-size: 10px;
+            padding: 7px;
+        }
+        .button{
+            text-align: center;
+        }
+        .button button{
+            padding: 3px;
+            border-radius: 9px;
+            background-color: rgb(116, 116, 234);
+            font-size: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <div class="image">
+            <!--we give width of image 188 ie less tha width of card ie 198 so that the image fits inside the card-->
+            <img width="188" height="180" src="ig_image.jpg" alt="Image"
+        </div>
+        <div class="capsules">
+            <span>Highneck</span>
+            <span>Burger Tree</span>
+        </div>
+        <div class="content">
+            <h2>This is a page of Ayan</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt, rem. Est, voluptas excepturi ab, repudiandae, dignissimos voluptatibus officiis minima doloremque voluptate repellendus delectus asperiores eveniet harum dolor!</p>
+        </div>
+        <div class="button">
+            <button>Read More</button>
+        </div>
+    </div>
+
+
+    
+</body>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fonts , Text and Colors</title>
+    <!--We change the font using font family inside style tag ie internal CSS-->
+    <style>
+        /*if we import our font from google fonts*/
+     @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,300&display=swap');
+    
+
+    /*Times New Roman is the main font and remaining are the fallback fonts , they will be used when main font isnt
+    available*/
+    h1{
+       font-family: 'Times New Roman', Times , serif , Georgia ;
+       font-size:xx-large;
+       /*We can generate colors using RGB*/
+       color:rgba(138, 11, 167, 0.762)
+    }
+    h2{
+        /*If we want our text to be at the center*/
+        text-align: center;
+        /*makes all the letterd lowercase*/
+        text-transform: lowercase;
+        text-decoration: underline;
+        text-decoration-color: aqua;
+        /*text-decoration-style: dotted*/
+        text-decoration-thickness: 7px;
+        line-height: 2.5;
+    }
+    h3{
+         /*We can also generate colors using hex colors*/
+       color: #0BEE0B
+    }
+    .lorem{
+        border: 2px solid red;
+        width:45px;
+        text-overflow:ellipsis;
+        /*We see that the text overflows and goes outside the box , therefore we hide the texts using overflow:hidden*/
+        overflow:hidden;
+    }
+    p{
+    font-family: 'Poppins' , Times New Roman;
+    font-style: italic;
+    font-weight: bold;
+    }
+    </style>
+</head>
+
+<body>
+    <div>
+        <h1>Fonts</h1>
+        <h2>Hi Ayan here</h2>
+        <h3>Whatsup</h3>
+        <p>This is about fonts</p>
+        <p class="lorem">Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae, quam suscipit illum blanditiis neque accusamus porro sint aliquam, eaque enim rerum magni impedit!</p> 
+    </div>
+
+</body>
+
+</html>

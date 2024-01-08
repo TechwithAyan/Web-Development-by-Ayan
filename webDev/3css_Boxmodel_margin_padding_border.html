@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Box-Model</title>
+    <style>
+        /*IMP Formulas : 
+        1. Total width= Width + left padding + right padding + left border + right border + left margin + right margin
+
+        2. Total height= Height + top padding + bottom padding + top border + bottom border + top margin + bottom margin */
+        
+        /*universal selector*/
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        /*We give this property to every element*/
+        .box{
+            background-color: yellow;
+        }
+        /*we give this property to specific element , we give padding margin and border to box1 , here px means pixel*/
+        .box1{
+          color: palevioletred;
+          padding: 10px;
+          margin: 35px;
+          border:2px solid black;
+          height: 200px;
+          /*we use box-sizing: border box for specifying that the height we gave to the element ie 200 is the height after adding border and padding*/
+          box-sizing:border-box;
+        }
+        /*we give this property to specific element*/
+        .box2{
+          color: rgb(10, 177, 219);
+          padding: 10px;
+          margin: 25px;
+          border:2px solid black;
+          height: 200px;
+        }
+        /* We see that first box has 35 margin whereas second box has 25 margin so there should be a gap of 60 between them , bbut this is not the case , it only takes the larger among both here 35 as gap between them , this is called marginn collapse*/
+    </style>
+</head>
+<body>
+    <!--2 classes can be given to an element , here classes are box , box1 and box2 -->
+    <div class="box box1">I am a box</div>
+    <div class="box box2">I am another box</div>
+    
+</body>
+</html>
