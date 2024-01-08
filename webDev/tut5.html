@@ -1,0 +1,55 @@
+<!--Forms and input tags-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Forms-Let's learn it</title>
+</head>
+
+<body>
+    <h1>Random Form</h1>
+    <form action="post">
+        <div>
+            <!--Whenever we use for in label we have to use id in input or textarea , we use label for id , id is used to identify uniquely-->
+            <label for="username">Enter your username</label>
+            <input type="text" id="username" name="username" placeholer="Enter your username" autofocus>
+        </div>
+        <div>
+            <!--Both have same name ie gender therefore 1 at a time can be selected-->
+            <label for="male">Male</label>
+            <input type="radio" id="male" name="gender" value="male" />
+            <label for="female">Female</label>
+            <input type="radio" id="female" name="gender" value="female" />
+        </div>
+        <div>
+            <!--If we write input code before label code tick mark box comes first then comes the text , here checkbox comes first than comes the text "Subscribe my channel"-->
+            <input type="checkbox" id="subscribe" name="subscribe" value="yes">
+            <label for="Subscribe">Subscribe my channel</label>
+        </div>
+        <div>
+            <!--If we write label code before input code text comes first then comes the tick mark box , here the text "Subscribe my channel" comes first than comes the  checkbox "-->
+            <label for="Subscribe">Subscribe my channel</label>
+            <input type="checkbox" id="subscribe" name="subscribe" value="yes">
+        </div>
+        <div>
+            <label for="comment">Enter your comment</label>
+            <br>
+            <textarea id="comment" name="comment" id="" cols="40" rows="5">
+            </textarea>
+        </div>
+        <div>
+            <select name="cars">
+                <option value="Audi">Audi</option>
+                <option value="VW">VW</option>
+                <option value="Rolls Royce">Rolls Royce</option>
+                <option value="Bentley">Bentley</option>
+
+            </select>
+        </div>
+            
+    </form>
+</body>
+
+</html>
