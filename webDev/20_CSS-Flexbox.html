@@ -10,7 +10,7 @@
             /*Boxes are from top to bottom but if we want our boxes from left to right , we use flex box and we give display display:flex inside the container class so that we can use its properties*/
             display: flex; 
             height: 70vh;
-            /*If we want our items to be horizontally centered*/
+            /*If we want our items to be horizontally centered , then it will see flex direction , if flex-direction:row then main axis is towards row and elemnts will be centr alligned according to row , if main axis is towards column then elements will be centre alligned according to row*/
             justify-content: center;
             /*But we dont have justify-items in flexbox*/
             /*If we want our items to be vertically centered moreover we use align-items when we have 1 liner items*/
@@ -18,30 +18,30 @@
             /*We use align-contents when we have more than 1 liner items ie 2 or more lines*/
             align-content: center;
             /*If we want our items from top to bottom*/
-            flex-direction: column;
-            /*If we want our items from bottom to top*/
-            flex-direction: column-reverse;
-            /*If we want our items from left to right*/
             flex-direction: row;
+            /*If we want our items from bottom to top*/
+            /*flex-direction: column-reverse;*/
+            /*If we want our items from left to right*/
+            /*flex-direction: row;*/
             /*If we want our items from right to left*/
-            flex-direction: row-reverse;
+            /*flex-direction: row-reverse;*/
             /*We use flex-wrap to wrap new content to bottom line*/
             /*flex-wrap: wrap;*/
             /*As we used flex-wrap we can see that 6 boxes were brought to  bottom line once they overflowed*/
-            /*flex-flow:direction wrap*/
+            /*We use flex-flow:direction wrap for flex wrap in particular direction*/
             /*flex-flow: row wrap;*/
             /*As we have flex properties for container , simillarly we have flex properties for items*/
             row-gap: 100px;
             column-gap: 30px;
             /*Short hand for row-gap and column-gap is gap: row gap ! column gap*/
-            gap:40px 10px;
+            gap:100px 30px;
         }
         .item{
             /*let every item has flex grow 1*/
             flex-grow:1;
-            height: 52px;
-            width: 52px;
-            background-color: rgb(169, 82, 209);
+            height: 92px;
+            width: 92px;
+            background-color: rgb(43, 112, 101);
             border: 3px solid black;
             /*margin:4px;*/
             color:black;
@@ -56,6 +56,7 @@
         .order-3{
             order:3;
         }
+        /*We gave by flex grow of all items as 1 but of item-1 as 2 so it wil take size of 2 boxes*/
         .item1{
             flex-grow: 2;
         }
@@ -64,7 +65,7 @@
 <body>
     <main>
         <div class="container">
-            <div class="item">1</div>
+            <div class="item item1">1</div>
             <div class="item">2</div>
             <div class="item">3</div>
             <div class="item">4</div>
