@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Grid</title>
+    <style>
+        .container{
+            border:2px solid black;
+            display: grid;
+            /*Suppose we want 2  columns*/
+            /*grid-template-columns: 120px 100px;*/
+            /*And we want 3 rows*/
+            /*grid-template-rows: 100px 100px 100px;*/
+            /*Suppose we want to name the grid areas we use grid-template-areas */
+            grid-template-areas: "nav nav nav"
+                                 "side article article"
+                                 "footer footer footer";
+        }
+        .item{
+            border:2px solid rgb(31, 19, 19);
+            height:55px;
+        }
+        .item-1{
+            grid-area: nav;
+            background-color: rgb(149, 242, 242);
+            text-align: center;
+            display:flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .item-2{
+            grid-area: side;
+            background-color: rgb(227, 182, 123);
+            text-align: center;
+            display:flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .item-3{
+            grid-area: article;
+            background-color: rgb(195, 150, 237);
+            text-align: center;
+            display:flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .item-4{
+            grid-area: footer;
+            background-color: rgb(172, 213, 131);
+            text-align: center;
+            display:flex;
+            justify-content: center;
+            align-items: center;
+        }
+        /*If we want to overlap item 1 with item 5 ie the navbar*/
+        .item-5{
+            grid-area: nav;
+            background-color: rgb(238, 26, 146);
+            text-align: center;
+            display:flex;
+            justify-content: center;
+            align-items: center;
+        }
+        /*We can also use grid-template-columns/rows: 1fr 1fr 1fr , suppose we take colum width:90vw , then 3 sections of 1 fraction will e taken*/
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="item item-1">Nav Bar</div>
+        <div class="item item-2">Side</div>
+        <div class="item item-3">Article</div>
+        <div class="item item-4">Footer</div>
+        <div class="item item-5">Nav Bar</div>
+    </div>
+    <div class="box"></div>
+</body>
+</html>
