@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=+--, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            background-color: aquamarine;
+            width:50vw;
+            height:40vh;
+        }
+        .box{
+            background-color: hotpink;
+            width: 5vw;
+            height: 4vh;
+            /*We have 4 transition properties and we apply them in the transform*/
+            /*transition-property: transform;*/
+            /*If we want transition property in all then */
+            /*transition-property: all;*/
+            /*We can also give 2 transition properties together by comma separated values   */
+            transition-property: background-color,transform;
+            /*Transition-duration means for how long the transition appears*/
+            transition-duration: 3s;
+            transition-timing-function:cubic-bezier(0.45, 0.67, 0.58, 1);
+            /*We use transition-delay to specify the time after which we want our transition to start*/
+            /*We can apply all transition properties directly in 1 line*/
+            /*transition:all 3s ease-in-out 1s*/
+        }
+        .translate{
+            transform: translateX(10vw) translateY(10vh);
+            /*Color wil change from pink to green when we add translate class*/
+            background-color: rgb(129, 236, 57);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box"></div>
+    </div>
+    
+</body>
+</html>
